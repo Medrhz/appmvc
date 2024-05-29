@@ -1,15 +1,16 @@
 <?php
 
-include "./model/UserModel.php";
+include "./app/model/UserModel.php";
+
 function homeAction()
 {
     $users = allUsers();
-    require "./view/listUsersView.php";
+    require "./app/view/listUsersView.php";
 }
 
 function createAction()
 {
-    require "./view/createView.php";
+    require "./app/view/createView.php";
 }
 
 function storeAction()
@@ -25,7 +26,7 @@ function storeAction()
 function editAction()
 {
     $user = editUser($_GET['id']);
-    require "./view/editView.php";
+    require "./app/view/editView.php";
 }
 
 function updateAction()

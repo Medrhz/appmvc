@@ -16,20 +16,21 @@ ob_start();
     </thead>
     <tbody>
         <?php foreach ($users as $user) : ?>
-            <tr>
-                <td><?= $user->id ?></td>
-                <td><?= $user->fname ?></td>
-                <td><?= $user->lname ?></td>
-                <td><?= $user->city ?></td>
-                <td><?= $user->age ?></td>
-                <td>
-                    <a class="btn btn-success" href="index.php?action=edit&id=<?= $user->id ?>">update</a>
-                    <a class="btn btn-warning" href="index.php?action=delete&id=<?= $user->id ?>">delete</a>
+        <tr>
+            <td><?= $user->id ?></td>
+            <td><?= $user->fname ?></td>
+            <td><?= $user->lname ?></td>
+            <td><?= $user->city ?></td>
+            <td><?= $user->age ?></td>
+            <td>
+                <a class="btn btn-success" href="index.php?action=edit&id=<?= $user->id ?>">update</a>
+                <a class="btn btn-warning" href="index.php?action=delete&id=<?= $user->id ?>">delete</a>
 
-                </td>
-            </tr>
+            </td>
+        </tr>
         <?php endforeach; ?>
     </tbody>
+
 </table>
 <?php
 $content = ob_get_clean();

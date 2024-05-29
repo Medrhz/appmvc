@@ -1,6 +1,4 @@
 <?php
-
-
 function connection()
 {
     return new PDO("mysql:host=localhost;dbname=appmvc", "root", "");

@@ -1,7 +1,5 @@
 <?php
-require "./controller/UserController.php";
-
-
+require "./app/controller/UserController.php";
 if (isset($_GET['action'])) {
     $action  = $_GET['action'];
     switch ($action) {
@@ -11,17 +9,17 @@ if (isset($_GET['action'])) {
         case 'create':
             createAction();
             break;
-        case 'edit':
-            editAction();
-            break;
-        case 'delete':
-            destroyAction();
-            break;
         case 'store':
             storeAction();
             break;
+        case 'edit':
+            editAction();
+            break;
         case 'update':
             updateAction();
+            break;
+        case 'delete':
+            destroyAction();
             break;
     }
 } else {
